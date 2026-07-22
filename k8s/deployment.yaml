@@ -1,0 +1,47 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: dedup-test
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: grpc-dedup-test
+  namespace: dedup-test
+  labels:
+    app: grpc-dedup-test
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: grpc-dedup-test
+  template:
+    metadata:
+      labels:
+        app: grpc-dedup-test
+    spec:
+      containers:
+        - name: grpc-dedup-test
+          image: grpc-dedup-test:latest
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 50051
+          resources:
+            requests:
+              cpu: 50m
+              memory: 32Mi
+            limits:
+              cpu: 200m
+              memory: 64Mi
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: grpc-dedup-test
+  namespace: dedup-test
+spec:
+  selector:
+    app: grpc-dedup-test
+  ports:
+    - port: 50051
+      targetPort: 50051

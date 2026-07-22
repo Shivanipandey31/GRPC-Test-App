@@ -1,0 +1,84 @@
+🐰 Keploy: 2026-06-22T06:44:37.959887389Z 	[35mDEBUG[0m	seeding shared time files for time freezing in compose mode
+🐰 Keploy: 2026-06-22T06:44:37.963864709Z 	[35mDEBUG[0m	dedup is disabled
+🐰 Keploy: 2026-06-22T06:44:37.964099097Z 	[35mDEBUG[0m	MockOutgoing function called	{"options": {"Rules":[],"MongoPassword":"default@123","TLSPrivateKey":"","Synchronous":false,"SQLDelay":30000000000,"Mocking":true,"DstCfg":null,"Backdate":"0001-01-01T00:00:00Z","NoiseConfig":{},"DisableAutoHeaderNoise":false,"SchemaNoiseDetection":false,"SchemaNoiseStrict":false,"SkipTLSMITM":false,"ConnKey":"","CapturePackets":false,"OpportunisticTLSIntercept":false,"MysqlPorts":[]}}
+🐰 Keploy: 2026-06-22T06:44:37.964904911Z 	[35mDEBUG[0m	Successfully stored mocks for client
+🐰 Keploy: 2026-06-22T06:44:37.965121449Z 	[35mDEBUG[0m	UpdateMockParams called	{"afterTime": "🐰 Keploy: 2000-01-01T00:00:00Z ", "beforeTime": "🐰 Keploy: 2026-06-22T12:14:37.96502554+05:30 ", "useMappingBased": false, "mockMappingCount": 0, "strictMockWindow": true}
+🐰 Keploy: 2026-06-22T06:44:37.965129489Z 	[35mDEBUG[0m	strict mock window active for test	{"windowStart": "🐰 Keploy: 2000-01-01T00:00:00Z ", "windowEnd": "🐰 Keploy: 2026-06-22T12:14:37.96502554+05:30 "}
+🐰 Keploy: 2026-06-22T06:44:37.965132069Z 	[35mDEBUG[0m	Original mocks before filtering	{"originalFiltered": 0, "originalUnfiltered": 0}
+🐰 Keploy: 2026-06-22T06:44:37.965136309Z 	[35mDEBUG[0m	After filtering	{"filteredMocks": 0, "unfilteredMocks": 0, "unfilteredWithIsFilteredTrue": 0, "unfilteredWithIsFilteredFalse": 0}
+🐰 Keploy: 2026-06-22T06:44:37.965140069Z 	[35mDEBUG[0m	DEBUG_TRACE SetFilteredMocks: tree swapped + revision bumped	{"mockManagerPtr": "0x1d2461ef94a0", "inputMocks": 0, "postgresV3Mocks": 0, "postgresV3MockNames": [], "newRevision": 117}
+🐰 Keploy: 2026-06-22T06:44:37.965145829Z 	[35mDEBUG[0m	Time taken to update mock params duration :	{"duration": "36.16µs"}
+🐰 Keploy: 2026-06-22T06:44:37.965336119Z 	[35mDEBUG[0m	Agent marked as ready	{"file": "/tmp/agent.ready"}
+🐰 Keploy: 2026-06-22T06:44:37.965339948Z 	[35mDEBUG[0m	Keploy Agent is ready from the ...
+🐰 Keploy: 2026-06-22T06:44:37.965790784Z 	[35mDEBUG[0m	UpdateMockParams called	{"afterTime": "🐰 Keploy: 2026-06-21T12:52:50.219Z ", "beforeTime": "🐰 Keploy: 2026-06-21T12:52:50.221Z ", "useMappingBased": false, "mockMappingCount": 0, "strictMockWindow": true}
+🐰 Keploy: 2026-06-22T06:44:37.965797264Z 	[35mDEBUG[0m	strict mock window active for test	{"windowStart": "🐰 Keploy: 2026-06-21T12:52:50.219Z ", "windowEnd": "🐰 Keploy: 2026-06-21T12:52:50.221Z "}
+🐰 Keploy: 2026-06-22T06:44:37.965799544Z 	[35mDEBUG[0m	Original mocks before filtering	{"originalFiltered": 0, "originalUnfiltered": 0}
+🐰 Keploy: 2026-06-22T06:44:37.965801984Z 	[35mDEBUG[0m	After filtering	{"filteredMocks": 0, "unfilteredMocks": 0, "unfilteredWithIsFilteredTrue": 0, "unfilteredWithIsFilteredFalse": 0}
+🐰 Keploy: 2026-06-22T06:44:37.965810824Z 	[35mDEBUG[0m	DEBUG_TRACE SetFilteredMocks: tree swapped + revision bumped	{"mockManagerPtr": "0x1d2461ef94a0", "inputMocks": 0, "postgresV3Mocks": 0, "postgresV3MockNames": [], "newRevision": 119}
+🐰 Keploy: 2026-06-22T06:44:37.965823844Z 	[35mDEBUG[0m	Time taken to update mock params duration :	{"duration": "45.82µs"}
+🐰 Keploy: 2026-06-22T06:44:37.966388529Z 	[34mINFO[0m	🥶Freezing ⌛time for the [test-set-b8b4cd889-grpc-dedup-test-b8b4cd889-77tcl] to [2026-06-21 12:52:50.219 +0000 UTC]
+🐰 Keploy: 2026-06-22T06:44:37.966459449Z 	[34mINFO[0m	⌛Time 🥶frozen successfully for the [test-set-b8b4cd889-grpc-dedup-test-b8b4cd889-77tcl] to [2026-06-21 12:52:50.219 +0000 UTC]
+🐰 Keploy: 2026-06-22T06:44:37.968500994Z 	[35mDEBUG[0m	UpdateMockParams called	{"afterTime": "🐰 Keploy: 2026-06-21T12:52:50.298Z ", "beforeTime": "🐰 Keploy: 2026-06-21T12:52:50.299Z ", "useMappingBased": false, "mockMappingCount": 0, "strictMockWindow": true}
+🐰 Keploy: 2026-06-22T06:44:37.968507344Z 	[35mDEBUG[0m	strict mock window active for test	{"windowStart": "🐰 Keploy: 2026-06-21T12:52:50.298Z ", "windowEnd": "🐰 Keploy: 2026-06-21T12:52:50.299Z "}
+🐰 Keploy: 2026-06-22T06:44:37.968509214Z 	[35mDEBUG[0m	Original mocks before filtering	{"originalFiltered": 0, "originalUnfiltered": 0}
+🐰 Keploy: 2026-06-22T06:44:37.968511524Z 	[35mDEBUG[0m	After filtering	{"filteredMocks": 0, "unfilteredMocks": 0, "unfilteredWithIsFilteredTrue": 0, "unfilteredWithIsFilteredFalse": 0}
+🐰 Keploy: 2026-06-22T06:44:37.968514144Z 	[35mDEBUG[0m	DEBUG_TRACE SetFilteredMocks: tree swapped + revision bumped	{"mockManagerPtr": "0x1d2461ef94a0", "inputMocks": 0, "postgresV3Mocks": 0, "postgresV3MockNames": [], "newRevision": 121}
+🐰 Keploy: 2026-06-22T06:44:37.968531174Z 	[35mDEBUG[0m	Time taken to update mock params duration :	{"duration": "40.81µs"}
+🐰 Keploy: 2026-06-22T06:44:37.969338117Z 	[34mINFO[0m	🥶Freezing ⌛time for the [test-set-b8b4cd889-grpc-dedup-test-b8b4cd889-77tcl] to [2026-06-21 12:52:50.298 +0000 UTC]
+🐰 Keploy: 2026-06-22T06:44:37.969414377Z 	[34mINFO[0m	⌛Time 🥶frozen successfully for the [test-set-b8b4cd889-grpc-dedup-test-b8b4cd889-77tcl] to [2026-06-21 12:52:50.298 +0000 UTC]
+🐰 Keploy: 2026-06-22T06:44:37.971188064Z 	[35mDEBUG[0m	UpdateMockParams called	{"afterTime": "🐰 Keploy: 2026-06-21T12:52:50.31Z ", "beforeTime": "🐰 Keploy: 2026-06-21T12:52:50.31Z ", "useMappingBased": false, "mockMappingCount": 0, "strictMockWindow": true}
+🐰 Keploy: 2026-06-22T06:44:37.971195253Z 	[35mDEBUG[0m	strict mock window active for test	{"windowStart": "🐰 Keploy: 2026-06-21T12:52:50.31Z ", "windowEnd": "🐰 Keploy: 2026-06-21T12:52:50.31Z "}
+🐰 Keploy: 2026-06-22T06:44:37.971197243Z 	[35mDEBUG[0m	Original mocks before filtering	{"originalFiltered": 0, "originalUnfiltered": 0}
+🐰 Keploy: 2026-06-22T06:44:37.971200163Z 	[35mDEBUG[0m	After filtering	{"filteredMocks": 0, "unfilteredMocks": 0, "unfilteredWithIsFilteredTrue": 0, "unfilteredWithIsFilteredFalse": 0}
+🐰 Keploy: 2026-06-22T06:44:37.971202594Z 	[35mDEBUG[0m	DEBUG_TRACE SetFilteredMocks: tree swapped + revision bumped	{"mockManagerPtr": "0x1d2461ef94a0", "inputMocks": 0, "postgresV3Mocks": 0, "postgresV3MockNames": [], "newRevision": 123}
+🐰 Keploy: 2026-06-22T06:44:37.971219984Z 	[35mDEBUG[0m	Time taken to update mock params duration :	{"duration": "41.539µs"}
+🐰 Keploy: 2026-06-22T06:44:37.97175079Z 	[34mINFO[0m	🥶Freezing ⌛time for the [test-set-b8b4cd889-grpc-dedup-test-b8b4cd889-77tcl] to [2026-06-21 12:52:50.31 +0000 UTC]
+🐰 Keploy: 2026-06-22T06:44:37.971838838Z 	[34mINFO[0m	⌛Time 🥶frozen successfully for the [test-set-b8b4cd889-grpc-dedup-test-b8b4cd889-77tcl] to [2026-06-21 12:52:50.31 +0000 UTC]
+🐰 Keploy: 2026-06-22T06:44:37.973265308Z 	[35mDEBUG[0m	UpdateMockParams called	{"afterTime": "🐰 Keploy: 2026-06-21T12:52:50.343Z ", "beforeTime": "🐰 Keploy: 2026-06-21T12:52:50.344Z ", "useMappingBased": false, "mockMappingCount": 0, "strictMockWindow": true}
+🐰 Keploy: 2026-06-22T06:44:37.973271038Z 	[35mDEBUG[0m	strict mock window active for test	{"windowStart": "🐰 Keploy: 2026-06-21T12:52:50.343Z ", "windowEnd": "🐰 Keploy: 2026-06-21T12:52:50.344Z "}
+🐰 Keploy: 2026-06-22T06:44:37.973273078Z 	[35mDEBUG[0m	Original mocks before filtering	{"originalFiltered": 0, "originalUnfiltered": 0}
+🐰 Keploy: 2026-06-22T06:44:37.973275958Z 	[35mDEBUG[0m	After filtering	{"filteredMocks": 0, "unfilteredMocks": 0, "unfilteredWithIsFilteredTrue": 0, "unfilteredWithIsFilteredFalse": 0}
+🐰 Keploy: 2026-06-22T06:44:37.973278078Z 	[35mDEBUG[0m	DEBUG_TRACE SetFilteredMocks: tree swapped + revision bumped	{"mockManagerPtr": "0x1d2461ef94a0", "inputMocks": 0, "postgresV3Mocks": 0, "postgresV3MockNames": [], "newRevision": 125}
+🐰 Keploy: 2026-06-22T06:44:37.973294287Z 	[35mDEBUG[0m	Time taken to update mock params duration :	{"duration": "40.409µs"}
+🐰 Keploy: 2026-06-22T06:44:37.973765694Z 	[34mINFO[0m	🥶Freezing ⌛time for the [test-set-b8b4cd889-grpc-dedup-test-b8b4cd889-77tcl] to [2026-06-21 12:52:50.343 +0000 UTC]
+🐰 Keploy: 2026-06-22T06:44:37.973838143Z 	[34mINFO[0m	⌛Time 🥶frozen successfully for the [test-set-b8b4cd889-grpc-dedup-test-b8b4cd889-77tcl] to [2026-06-21 12:52:50.343 +0000 UTC]
+🐰 Keploy: 2026-06-22T06:44:37.975210222Z 	[35mDEBUG[0m	UpdateMockParams called	{"afterTime": "🐰 Keploy: 2026-06-21T12:52:50.393Z ", "beforeTime": "🐰 Keploy: 2026-06-21T12:52:50.393Z ", "useMappingBased": false, "mockMappingCount": 0, "strictMockWindow": true}
+🐰 Keploy: 2026-06-22T06:44:37.975215432Z 	[35mDEBUG[0m	strict mock window active for test	{"windowStart": "🐰 Keploy: 2026-06-21T12:52:50.393Z ", "windowEnd": "🐰 Keploy: 2026-06-21T12:52:50.393Z "}
+🐰 Keploy: 2026-06-22T06:44:37.975218502Z 	[35mDEBUG[0m	Original mocks before filtering	{"originalFiltered": 0, "originalUnfiltered": 0}
+🐰 Keploy: 2026-06-22T06:44:37.975221132Z 	[35mDEBUG[0m	After filtering	{"filteredMocks": 0, "unfilteredMocks": 0, "unfilteredWithIsFilteredTrue": 0, "unfilteredWithIsFilteredFalse": 0}
+🐰 Keploy: 2026-06-22T06:44:37.975223952Z 	[35mDEBUG[0m	DEBUG_TRACE SetFilteredMocks: tree swapped + revision bumped	{"mockManagerPtr": "0x1d2461ef94a0", "inputMocks": 0, "postgresV3Mocks": 0, "postgresV3MockNames": [], "newRevision": 127}
+🐰 Keploy: 2026-06-22T06:44:37.975240512Z 	[35mDEBUG[0m	Time taken to update mock params duration :	{"duration": "39.79µs"}
+🐰 Keploy: 2026-06-22T06:44:37.975781309Z 	[34mINFO[0m	🥶Freezing ⌛time for the [test-set-b8b4cd889-grpc-dedup-test-b8b4cd889-77tcl] to [2026-06-21 12:52:50.393 +0000 UTC]
+🐰 Keploy: 2026-06-22T06:44:37.975875697Z 	[34mINFO[0m	⌛Time 🥶frozen successfully for the [test-set-b8b4cd889-grpc-dedup-test-b8b4cd889-77tcl] to [2026-06-21 12:52:50.393 +0000 UTC]
+🐰 Keploy: 2026-06-22T06:44:37.977467316Z 	[35mDEBUG[0m	UpdateMockParams called	{"afterTime": "🐰 Keploy: 2026-06-21T12:52:50.431Z ", "beforeTime": "🐰 Keploy: 2026-06-21T12:52:50.432Z ", "useMappingBased": false, "mockMappingCount": 0, "strictMockWindow": true}
+🐰 Keploy: 2026-06-22T06:44:37.977472996Z 	[35mDEBUG[0m	strict mock window active for test	{"windowStart": "🐰 Keploy: 2026-06-21T12:52:50.431Z ", "windowEnd": "🐰 Keploy: 2026-06-21T12:52:50.432Z "}
+🐰 Keploy: 2026-06-22T06:44:37.977474786Z 	[35mDEBUG[0m	Original mocks before filtering	{"originalFiltered": 0, "originalUnfiltered": 0}
+🐰 Keploy: 2026-06-22T06:44:37.977478096Z 	[35mDEBUG[0m	After filtering	{"filteredMocks": 0, "unfilteredMocks": 0, "unfilteredWithIsFilteredTrue": 0, "unfilteredWithIsFilteredFalse": 0}
+🐰 Keploy: 2026-06-22T06:44:37.977479926Z 	[35mDEBUG[0m	DEBUG_TRACE SetFilteredMocks: tree swapped + revision bumped	{"mockManagerPtr": "0x1d2461ef94a0", "inputMocks": 0, "postgresV3Mocks": 0, "postgresV3MockNames": [], "newRevision": 129}
+🐰 Keploy: 2026-06-22T06:44:37.977493015Z 	[35mDEBUG[0m	Time taken to update mock params duration :	{"duration": "36.729µs"}
+🐰 Keploy: 2026-06-22T06:44:37.977986092Z 	[34mINFO[0m	🥶Freezing ⌛time for the [test-set-b8b4cd889-grpc-dedup-test-b8b4cd889-77tcl] to [2026-06-21 12:52:50.431 +0000 UTC]
+🐰 Keploy: 2026-06-22T06:44:37.978065371Z 	[34mINFO[0m	⌛Time 🥶frozen successfully for the [test-set-b8b4cd889-grpc-dedup-test-b8b4cd889-77tcl] to [2026-06-21 12:52:50.431 +0000 UTC]
+🐰 Keploy: 2026-06-22T06:44:37.97951266Z 	[35mDEBUG[0m	UpdateMockParams called	{"afterTime": "🐰 Keploy: 2026-06-21T12:52:50.443Z ", "beforeTime": "🐰 Keploy: 2026-06-21T12:52:50.444Z ", "useMappingBased": false, "mockMappingCount": 0, "strictMockWindow": true}
+🐰 Keploy: 2026-06-22T06:44:37.9795173Z 	[35mDEBUG[0m	strict mock window active for test	{"windowStart": "🐰 Keploy: 2026-06-21T12:52:50.443Z ", "windowEnd": "🐰 Keploy: 2026-06-21T12:52:50.444Z "}
+🐰 Keploy: 2026-06-22T06:44:37.979518879Z 	[35mDEBUG[0m	Original mocks before filtering	{"originalFiltered": 0, "originalUnfiltered": 0}
+🐰 Keploy: 2026-06-22T06:44:37.97952109Z 	[35mDEBUG[0m	After filtering	{"filteredMocks": 0, "unfilteredMocks": 0, "unfilteredWithIsFilteredTrue": 0, "unfilteredWithIsFilteredFalse": 0}
+🐰 Keploy: 2026-06-22T06:44:37.97952329Z 	[35mDEBUG[0m	DEBUG_TRACE SetFilteredMocks: tree swapped + revision bumped	{"mockManagerPtr": "0x1d2461ef94a0", "inputMocks": 0, "postgresV3Mocks": 0, "postgresV3MockNames": [], "newRevision": 131}
+🐰 Keploy: 2026-06-22T06:44:37.979537279Z 	[35mDEBUG[0m	Time taken to update mock params duration :	{"duration": "34.309µs"}
+🐰 Keploy: 2026-06-22T06:44:37.980042385Z 	[34mINFO[0m	🥶Freezing ⌛time for the [test-set-b8b4cd889-grpc-dedup-test-b8b4cd889-77tcl] to [2026-06-21 12:52:50.443 +0000 UTC]
+🐰 Keploy: 2026-06-22T06:44:37.980136156Z 	[34mINFO[0m	⌛Time 🥶frozen successfully for the [test-set-b8b4cd889-grpc-dedup-test-b8b4cd889-77tcl] to [2026-06-21 12:52:50.443 +0000 UTC]
+🐰 Keploy: 2026-06-22T06:44:37.981609883Z 	[35mDEBUG[0m	UpdateMockParams called	{"afterTime": "🐰 Keploy: 2026-06-21T12:52:50.503Z ", "beforeTime": "🐰 Keploy: 2026-06-21T12:52:50.503Z ", "useMappingBased": false, "mockMappingCount": 0, "strictMockWindow": true}
+🐰 Keploy: 2026-06-22T06:44:37.981615584Z 	[35mDEBUG[0m	strict mock window active for test	{"windowStart": "🐰 Keploy: 2026-06-21T12:52:50.503Z ", "windowEnd": "🐰 Keploy: 2026-06-21T12:52:50.503Z "}
+🐰 Keploy: 2026-06-22T06:44:37.981617704Z 	[35mDEBUG[0m	Original mocks before filtering	{"originalFiltered": 0, "originalUnfiltered": 0}
+🐰 Keploy: 2026-06-22T06:44:37.981620003Z 	[35mDEBUG[0m	After filtering	{"filteredMocks": 0, "unfilteredMocks": 0, "unfilteredWithIsFilteredTrue": 0, "unfilteredWithIsFilteredFalse": 0}
+🐰 Keploy: 2026-06-22T06:44:37.981621994Z 	[35mDEBUG[0m	DEBUG_TRACE SetFilteredMocks: tree swapped + revision bumped	{"mockManagerPtr": "0x1d2461ef94a0", "inputMocks": 0, "postgresV3Mocks": 0, "postgresV3MockNames": [], "newRevision": 133}
+🐰 Keploy: 2026-06-22T06:44:37.981634883Z 	[35mDEBUG[0m	Time taken to update mock params duration :	{"duration": "50.38µs"}
+🐰 Keploy: 2026-06-22T06:44:37.982194109Z 	[34mINFO[0m	🥶Freezing ⌛time for the [test-set-b8b4cd889-grpc-dedup-test-b8b4cd889-77tcl] to [2026-06-21 12:52:50.503 +0000 UTC]
+🐰 Keploy: 2026-06-22T06:44:37.982280889Z 	[34mINFO[0m	⌛Time 🥶frozen successfully for the [test-set-b8b4cd889-grpc-dedup-test-b8b4cd889-77tcl] to [2026-06-21 12:52:50.503 +0000 UTC]
+🐰 Keploy: 2026-06-22T06:44:37.983831458Z 	[35mDEBUG[0m	UpdateMockParams called	{"afterTime": "🐰 Keploy: 2026-06-21T12:52:50.515Z ", "beforeTime": "🐰 Keploy: 2026-06-21T12:52:50.515Z ", "useMappingBased": false, "mockMappingCount": 0, "strictMockWindow": true}
+🐰 Keploy: 2026-06-22T06:44:37.983837447Z 	[35mDEBUG[0m	strict mock window active for test	{"windowStart": "🐰 Keploy: 2026-06-21T12:52:50.515Z ", "windowEnd": "🐰 Keploy: 2026-06-21T12:52:50.515Z "}
+🐰 Keploy: 2026-06-22T06:44:37.983839178Z 	[35mDEBUG[0m	Original mocks before filtering	{"originalFiltered": 0, "originalUnfiltered": 0}
+🐰 Keploy: 2026-06-22T06:44:37.983841187Z 	[35mDEBUG[0m	After filtering	{"filteredMocks": 0, "unfilteredMocks": 0, "unfilteredWithIsFilteredTrue": 0, "unfilteredWithIsFilteredFalse": 0}
+🐰 Keploy: 2026-06-22T06:44:37.983842847Z 	[35mDEBUG[0m	DEBUG_TRACE SetFilteredMocks: tree swapped + revision bumped	{"mockManagerPtr": "0x1d2461ef94a0", "inputMocks": 0, "postgresV3Mocks": 0, "postgresV3MockNames": [], "newRevision": 135}
+🐰 Keploy: 2026-06-22T06:44:37.983853826Z 	[35mDEBUG[0m	Time taken to update mock params duration :	{"duration": "31.91µs"}
+🐰 Keploy: 2026-06-22T06:44:37.984308574Z 	[34mINFO[0m	🥶Freezing ⌛time for the [test-set-b8b4cd889-grpc-dedup-test-b8b4cd889-77tcl] to [2026-06-21 12:52:50.515 +0000 UTC]
+🐰 Keploy: 2026-06-22T06:44:37.984373973Z 	[34mINFO[0m	⌛Time 🥶frozen successfully for the [test-set-b8b4cd889-grpc-dedup-test-b8b4cd889-77tcl] to [2026-06-21 12:52:50.515 +0000 UTC]

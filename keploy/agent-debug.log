@@ -1,0 +1,6 @@
+🐰 Keploy: 2026-06-22T06:44:37.478191838Z 	[35mDEBUG[0m	KEPLOY_DEBUG_FILE attached	{"path": "/keploy-host/agent-debug.log"}
+🐰 Keploy: 2026-06-22T06:44:37.480447822Z 	[35mDEBUG[0m	got empty machine id
+🐰 Keploy: 2026-06-22T06:44:37.480458011Z 	[34mINFO[0m	Starting Keploy	{"version": "3-dev", "apiServerURL": "", "inDocker": true}
+🐰 Keploy: 2026-06-22T06:44:37.482257028Z 	[35mDEBUG[0m	adding flags for debug failures command
+🐰 Keploy: 2026-06-22T06:44:37.484239353Z 	[35mDEBUG[0m	adding additional test flags for cloud replay command
+🐰 Keploy: 2026-06-22T06:44:37.484266802Z 	[35mDEBUG[0m	adding flags for cloud replay

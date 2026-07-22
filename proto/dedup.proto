@@ -1,0 +1,142 @@
+syntax = "proto3";
+package deduptest;
+option go_package = "./pb";
+
+// DedupService exercises every static-dedup edge case:
+//
+//  GetItem      – same structure, different scalar values       → all dedup to 1
+//  GetWidget    – optional nested field absent vs present        → 2 distinct TCs
+//  RiskyCall    – success (grpc-status=0) vs error (status=3)   → 2 distinct TCs
+//  GetReport    – deeply nested + maps + repeated               → dedup to 1
+//  GetVariant   – oneof: three field-number variants            → 3 distinct TCs
+//  ListItems    – non-empty repeated vs empty (field absent)    → 2 distinct TCs
+service DedupService {
+  rpc GetItem    (GetItemReq)    returns (Item);
+  rpc GetWidget  (GetWidgetReq)  returns (Widget);
+  rpc RiskyCall  (RiskyReq)     returns (RiskyResp);
+  rpc GetReport  (ReportReq)    returns (Report);
+  rpc GetVariant (VariantReq)   returns (VariantResp);
+  rpc ListItems  (ListReq)      returns (ListResp);
+}
+
+// ── Group A: GetItem ─────────────────────────────────────────────────────────
+// Same structure every time – scalars, a map, a repeated field, and 2 levels
+// of nested messages.  Calling with id=1,2,3 should all hash identically.
+message GetItemReq { int32 id = 1; }
+
+message Item {
+  int32  id       = 1;
+  string name     = 2;
+  double price    = 3;
+  bool   in_stock = 4;
+  repeated string       tags       = 5;
+  map<string, string>   attributes = 6;
+  ItemDetail            detail     = 7;
+}
+message ItemDetail {
+  string   description = 1;
+  int32    stock_count = 2;
+  Supplier supplier    = 3;
+}
+message Supplier {
+  string name    = 1;
+  string country = 2;
+  string contact = 3;
+}
+
+// ── Group B: GetWidget ───────────────────────────────────────────────────────
+// mode="full"    → Widget.config is populated (field 3 present in wire)
+// mode="minimal" → Widget.config is nil        (field 3 absent in wire)
+// Different structural hashes → 2 TCs.
+message GetWidgetReq { string mode = 1; }  // "full" | "minimal"
+
+message Widget {
+  string       id     = 1;
+  string       type   = 2;
+  WidgetConfig config = 3;   // absent in minimal mode
+}
+message WidgetConfig {
+  string      theme = 1;
+  int32       size  = 2;
+  WidgetStyle style = 3;
+}
+message WidgetStyle {
+  string color  = 1;
+  bool   bold   = 2;
+  int32  weight = 3;
+}
+
+// ── Group C: RiskyCall ───────────────────────────────────────────────────────
+// should_fail=false → grpc-status trailer = "0"
+// should_fail=true  → grpc-status trailer = "3" (InvalidArgument)
+// The schema key includes grpc-status → 2 distinct TCs.
+message RiskyReq  { bool should_fail = 1; }
+message RiskyResp { string result    = 1; }
+
+// ── Group D: GetReport ───────────────────────────────────────────────────────
+// Deeply nested: Report → ReportSummary → ReportMeta → Environment (with map)
+//                Report → repeated Section → repeated Row
+// Calling with period="Q1","Q2","Q3" all produce the same structure → 1 TC.
+message ReportReq { string period = 1; }
+
+message Report {
+  string        id       = 1;
+  string        period   = 2;
+  ReportSummary summary  = 3;
+  repeated Section sections = 4;
+  map<string, int32> counters = 5;
+}
+message ReportSummary {
+  int32      total  = 1;
+  int32      passed = 2;
+  int32      failed = 3;
+  ReportMeta meta   = 4;
+}
+message ReportMeta {
+  string      generated_by = 1;
+  string      version      = 2;
+  Environment env          = 3;
+}
+message Environment {
+  string              name   = 1;
+  string              region = 2;
+  map<string, string> labels = 3;
+}
+message Section {
+  string        title = 1;
+  repeated Row  rows  = 2;
+}
+message Row {
+  string key   = 1;
+  string value = 2;
+  int32  score = 3;
+}
+
+// ── Group E: GetVariant ──────────────────────────────────────────────────────
+// oneof puts different field numbers on the wire depending on which branch is
+// set.  type="text" → field 1, type="number" → field 2, type="flag" → field 3.
+// Three distinct structural hashes → 3 TCs.
+message VariantReq  { string type = 1; }  // "text" | "number" | "flag"
+message VariantResp {
+  oneof payload {
+    string text_value   = 1;
+    int32  number_value = 2;
+    bool   flag_value   = 3;
+  }
+  string label = 4;
+}
+
+// ── Group F: ListItems ───────────────────────────────────────────────────────
+// include_items=true  → items repeated field is populated (field 1 on wire)
+// include_items=false → items is empty so field 1 is absent from wire
+// Different structural hashes → 2 TCs.
+message ListReq  { bool include_items = 1; }
+message ListResp {
+  repeated ListItem items = 1;
+  int32             total = 2;
+}
+message ListItem {
+  string id   = 1;
+  string name = 2;
+  string kind = 3;
+}
